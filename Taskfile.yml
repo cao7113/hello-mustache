@@ -1,0 +1,14 @@
+# https://taskfile.dev
+version: '2'
+tasks:
+  run:
+    desc: run
+    cmds:
+      # - which npx
+      - npx mustache friends.json letter-template.mustache | tee friends-letters.txt
+
+  install-js-mustache-engine:
+    desc: install mustache for js
+    cmds:
+      # - npm init
+      - npm install mustache
